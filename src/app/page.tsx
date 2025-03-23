@@ -6,7 +6,11 @@ export const generateMetadata = (): Metadata => ({
 });
 
 const page = () => {
-  return <></>;
+  return (
+    <>
+      <div className="">Todos Page</div>
+    </>
+  );
 };
 
 export default page;
