@@ -27,8 +27,8 @@ const CreateTodo = () => {
 
   return (
     <>
-      <div className="fixed bottom-8 sm:right-72">
-        <Card className="w-[320px]">
+      <div className="fixed bottom-2 sm:right-2">
+        <Card className="w-[320px] lg:w-[260px]">
           <CardHeader className="space-y-4">
             <CardTitle className="text-center text-2xl">Create Todo</CardTitle>
 

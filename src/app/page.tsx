@@ -1,5 +1,6 @@
 import CreateTodo from "@/components/todos/CreateTodo";
 import TodoCard from "@/components/todos/TodoCard";
+import TodoDisplay from "@/components/todos/TodoDisplay";
 import { Metadata } from "next";
 
 export const generateMetadata = (): Metadata => ({
@@ -10,9 +11,11 @@ export const generateMetadata = (): Metadata => ({
 const page = () => {
   return (
     <>
-      <TodoCard />
+      <div className="space-x-6">
+        <TodoDisplay />
 
-      <CreateTodo />
+        <CreateTodo />
+      </div>
     </>
   );
 };
