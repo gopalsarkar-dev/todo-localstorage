@@ -16,7 +16,9 @@ const RootLayout = ({ children }: RootLayoutProviderProps) => {
           enableSystem={false}
         >
           <TopBar />
-          <main className="">{children}</main>
+          <main className="container mx-auto max-w-5xl px-6 py-24">
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>
