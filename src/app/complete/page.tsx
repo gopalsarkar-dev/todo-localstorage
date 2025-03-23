@@ -1,7 +1,9 @@
+import CompletCardTodo from "@/components/todos/CompletCardTodo";
+
 const page = () => {
   return (
     <>
-      <div className="">Complete</div>
+      <CompletCardTodo />
     </>
   );
 };
