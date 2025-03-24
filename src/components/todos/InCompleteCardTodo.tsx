@@ -13,7 +13,7 @@ const InCompleteCardTodo = () => {
       <Card>
         <CardContent>
           <div className="text-center text-3xl font-bold">
-            No Complete Todo List Available😍😍
+            No InComplete Todo List Available😍😍
           </div>
         </CardContent>
       </Card>
