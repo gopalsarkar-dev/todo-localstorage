@@ -11,11 +11,9 @@ export const generateMetadata = (): Metadata => ({
 const page = () => {
   return (
     <>
-      <div className="space-x-6">
-        <TodoDisplay />
+      <TodoDisplay />
 
-        <CreateTodo />
-      </div>
+      <CreateTodo />
     </>
   );
 };

@@ -5,10 +5,10 @@ import { useAtom } from "jotai";
 import TodoCard from "./TodoCard";
 import { Card, CardContent } from "../ui/card";
 
-const CompletCardTodo = () => {
+const InCompleteCardTodo = () => {
   const [todos, setTodos] = useAtom(todoAtom);
 
-  if (todos.filter((id) => id.complet).length === 0) {
+  if (todos.filter((ids) => !ids.complet).length === 0) {
     return (
       <Card>
         <CardContent>
@@ -19,18 +19,21 @@ const CompletCardTodo = () => {
       </Card>
     );
   }
-
   return (
     <>
       <div className="grid gap-4">
         {todos
-          .filter((items) => items.complet)
+          .filter((items) => !items.complet)
           .map((items, index) => {
-            return <TodoCard info={items} key={index} />;
+            return (
+              <div className="" key={index}>
+                <TodoCard info={items} />
+              </div>
+            );
           })}
       </div>
     </>
   );
 };
 
-export default CompletCardTodo;
+export default InCompleteCardTodo;

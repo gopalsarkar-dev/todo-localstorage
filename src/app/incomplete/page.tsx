@@ -1,7 +1,9 @@
+import InCompleteCardTodo from "@/components/todos/InCompleteCardTodo";
+
 const page = () => {
   return (
     <>
-      <div className="">InComplet Page</div>
+      <InCompleteCardTodo />
     </>
   );
 };

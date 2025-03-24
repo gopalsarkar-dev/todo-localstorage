@@ -22,14 +22,10 @@ const TodoDisplay = () => {
 
   return (
     <>
-      <div className="pb-28 sm:pb-6">
-        {todos.map((item, index) => {
-          return (
-            <div className="space-y-4" key={index}>
-              <TodoCard info={item} />
-            </div>
-          );
-        })}
+      <div className="grid gap-4">
+        {todos.map((items, index) => (
+          <TodoCard info={items} key={index} />
+        ))}
       </div>
     </>
   );

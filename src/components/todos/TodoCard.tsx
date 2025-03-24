@@ -29,36 +29,34 @@ const TodoCard = ({ info }: TodoTypeProvider) => {
 
   return (
     <>
-      <div className="">
-        <Card className="">
-          <CardContent className="flex items-center justify-between gap-6">
-            <div className="flex items-center space-x-5">
-              <Checkbox
-                className="h-6 w-6 cursor-pointer"
-                checked={info.complet}
-                onCheckedChange={() => checkToggle(info.id)}
-              />
-              <label
-                className={`text-lg ${
-                  info.complet ? "line-through decoration-2" : ""
-                }`}
-              >
-                {info.todo_text}
-              </label>
-            </div>
+      <Card className="">
+        <CardContent className="flex items-center justify-between">
+          <div className="flex items-center space-x-5">
+            <Checkbox
+              className="h-6 w-6 cursor-pointer"
+              checked={info.complet}
+              onCheckedChange={() => checkToggle(info.id)}
+            />
+            <label
+              className={`text-lg ${
+                info.complet ? "line-through decoration-2" : ""
+              }`}
+            >
+              {info.todo_text}
+            </label>
+          </div>
 
-            <div className="">
-              <Button
-                variant={"destructive"}
-                className="cursor-pointer"
-                onClick={() => delFun(info.id)}
-              >
-                Delete
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+          <div className="">
+            <Button
+              variant={"destructive"}
+              className="cursor-pointer"
+              onClick={() => delFun(info.id)}
+            >
+              Delete
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
     </>
   );
 };
